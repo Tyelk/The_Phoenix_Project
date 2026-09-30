@@ -1,0 +1,60 @@
+:root {
+    /* COLOURS */
+    --brand-colour: #007ec3;
+    --secondary-colour: #034b73;
+    --tertirary-colour: #00adc7;
+    --filler-colour: #f5f5f5;
+    --standout-colour: #e26c45;
+    --text-main-colour: #0a0a0a;
+}
+
+* {
+    font-family: tenon, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-main-colour);
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+body {
+    background-color: blue;
+}
+
+header {
+    background-color: green;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    background-color: purple;
+    height: 60rem;
+}
+
+footer {
+    background-color: orange;
+}
