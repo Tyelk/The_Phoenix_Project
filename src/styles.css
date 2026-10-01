@@ -101,7 +101,7 @@ a, button {
     padding: 0.4rem 0.8rem;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, footer ul li a:hover {
     color: var(--link-hover-colour);
     transition: color 0.5s ease;
 }
@@ -126,6 +126,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header a {
+    text-decoration: none;
 }
 
 nav {
@@ -190,8 +194,62 @@ main {
     height: 60rem;
 }
 
+
+
+/* FOOTER */
 footer {
-    background-color: orange;
+    background-color: var(--filler-colour);
+    padding: 2rem 1.5rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: " contact contact mail mail social social "
+                        " details details details details details details ";
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    height: 100%;
+}
+
+.footer-header {
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+#footer-contact {
+    grid-area: contact;
+}
+
+#footer-mail {
+    grid-area: mail;
+}
+
+#footer-social {
+    grid-area: social;
+}
+
+#footer-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#footer-details p {
+    font-size: 0.9rem;
 }
 
 
@@ -227,11 +285,30 @@ footer {
         padding: 1rem 0;
         background-color: var(--filler-colour);
     }
+
+    footer {
+        grid-template-areas: " mail mail mail mail mail mail "
+                            " contact contact contact social social social "
+                            " details details details details details details ";
+    }
 }
 
 /* Adjust sizing on very small screens */
 @media screen and (max-width: 50em) {
     #header-logo-container {
         height: 85%;
+    }
+
+    footer {
+        grid-template-areas: " mail mail mail mail mail mail "
+                            " contact contact contact contact contact contact "
+                            " social social social social social social "
+                            " details details details details details details ";
+    }
+
+    #footer-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
     }
 }

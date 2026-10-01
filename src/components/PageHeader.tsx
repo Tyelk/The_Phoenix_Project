@@ -44,19 +44,19 @@ export default function PageHeader(): JSX.Element {
       <nav className={isMenuOpen ? "nav-open" : ""}>
         <ul>
           <li>
-            <a>Prostate Information</a>
+            <a href="/">Prostate Information</a>
           </li>
           <li>
-            <a>Get Support</a>
+            <a href="/">Get Support</a>
           </li>
           <li>
-            <a>Get Involved</a>
+            <a href="/">Get Involved</a>
           </li>
           <li>
-            <a>Education & Outreach</a>
+            <a href="/">Education & Outreach</a>
           </li>
           <li>
-            <a>Research</a>
+            <a href="/">Research</a>
           </li>
         </ul>
       </nav>
