@@ -3,11 +3,17 @@ import type { JSX } from "react/jsx-runtime";
 
 export default function PageHeader(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [searchInput, setSearchInput] = useState<string>("");
 
   // toggle search dropdown
   const toggleSearch = (): void => {
     setIsSearchOpen((prev) => !prev);
+  };
+
+  // toggle nav menu visibility
+  const toggleMenu = (): void => {
+    setIsMenuOpen((prev) => !prev);
   };
 
   // search text
@@ -17,6 +23,7 @@ export default function PageHeader(): JSX.Element {
     console.log("Searching for:", searchText);
     // DO SEARCH
     setIsSearchOpen(false);
+    setSearchInput("");
   };
 
   return (
@@ -26,8 +33,15 @@ export default function PageHeader(): JSX.Element {
         <img src="/src/assets/logo.png" alt="PCFNZ logo" />
       </a>
 
+      {/* Hamburger menu toggle */}
+      <button type="button" id="hamburger-btn" onClick={toggleMenu}>
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+        <span className="hamburger-bar"></span>
+      </button>
+
       {/* Navigation links */}
-      <nav>
+      <nav className={isMenuOpen ? "nav-open" : ""}>
         <ul>
           <li>
             <a>Prostate Information</a>
