@@ -197,7 +197,7 @@ nav ul li a:hover {
     margin-left: auto;
     margin-right: auto
 }
-
+/* HOME */
 #content-first {
     background-image: url("/src/assets/pcfnz-grey-man.jpg");
     background-repeat: no-repeat;
@@ -263,6 +263,22 @@ nav ul li a:hover {
 .card-icon {
     height: 70%;
     width: 70%;
+}
+/* DONATE */
+#donate-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.donate-input-section {
+    width: 60%;
+    min-width: 400px;
+    padding: 10px;
+}
+
+.donate-input-section label {
+    padding-left: 20px;
+    font-weight: 500;
 }
 
 
@@ -401,6 +417,38 @@ footer ul li a:hover {
 
 
 
+/* MISSING CONTENT POPUP */
+.missing-content-popup-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--shadow-colour);
+    backdrop-filter: blur(5px);
+}
+
+.missing-content-popup {
+    background-color: var(--filler-colour);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px var(--shadow-colour);
+    text-align: center;
+}
+
+
+
 /* MOBILE LAYOUT */
 @media screen and (max-width: 70em) {
     /* Show hamburger button */
@@ -452,6 +500,8 @@ footer ul li a:hover {
                             " details details details details details details ";
     }
 }
+
+
 
 /* Adjust sizing on very small screens */
 @media screen and (max-width: 50em) {

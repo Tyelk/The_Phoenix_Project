@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import type { JSX } from "react/jsx-runtime";
 
 export default function PageHeader(): JSX.Element {
@@ -29,9 +30,9 @@ export default function PageHeader(): JSX.Element {
   return (
     <header>
       {/* Logo section */}
-      <a id="header-logo-container" href="/">
+      <Link id="header-logo-container" to="/">
         <img src="/src/assets/logo.png" alt="PCFNZ logo" />
-      </a>
+      </Link>
 
       {/* Hamburger menu toggle */}
       <button type="button" id="hamburger-btn" onClick={toggleMenu}>
@@ -89,7 +90,9 @@ export default function PageHeader(): JSX.Element {
           )}
         </div>
 
-        <button className="plain-btn">Donate</button>
+        <Link to="/donate" className="plain-btn">
+          Donate
+        </Link>
       </div>
     </header>
   );
