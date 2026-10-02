@@ -1,9 +1,66 @@
 import type { JSX } from "react/jsx-runtime";
+import GameIcon from "./GameIcon";
+import HelpIcon from "./HelpIcon";
+import ResearchIcon from "./ResearchIcon";
 
 export default function Home(): JSX.Element {
   return (
-    <>
-      <main>home page</main>
-    </>
+    <div className="page-content">
+      <div id="content-first">
+        <h1>
+          1 in 8 men will be diagnosed with prostate cancer during their
+          lifetime
+        </h1>
+        <div id="content-first-button-section">
+          <button type="button" className="plain-btn">
+            What is prostate cancer?
+          </button>
+          <button type="button" className="plain-btn">
+            What will happen to my loved one?
+          </button>
+        </div>
+      </div>
+
+      <div id="content-second">
+        <h1>More Data</h1>
+        <div id="content-second-card-section">
+          <div className="home-card">
+            <HelpIcon className="card-icon" />
+            <p>
+              Have too many questions and do not know where to start? Check out
+              our frequently asked questions page to get a head start on your
+              journey!
+            </p>
+            <button type="button" className="plain-btn">
+              FAQ
+            </button>
+          </div>
+
+          <div className="home-card">
+            <GameIcon className="card-icon" />
+            <p>
+              Want to learn about prostate cancer in a new and interesting way,
+              or want to test your knowledge about the subject? Try out our
+              quiz!
+            </p>
+            <button type="button" className="plain-btn">
+              Game
+            </button>
+          </div>
+
+          <div className="home-card">
+            <ResearchIcon className="card-icon" />
+            <p>
+              Looking for additional resources to further your understanding of
+              prostate cancer and how it can be treated? Dive into our research
+              papers!
+            </p>
+            <button type="button" className="plain-btn">
+              Research
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
