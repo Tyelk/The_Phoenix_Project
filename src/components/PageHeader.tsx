@@ -1,11 +1,18 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import type { JSX } from "react/jsx-runtime";
 
 export default function PageHeader(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [searchInput, setSearchInput] = useState<string>("");
+  const location = useLocation();
+
+  useEffect(() => {
+    // Close nav menu and search when another page is navigated to
+    setIsMenuOpen(false);
+    setIsSearchOpen(false);
+  }, [location]);
 
   // toggle search dropdown
   const toggleSearch = (): void => {
@@ -31,7 +38,7 @@ export default function PageHeader(): JSX.Element {
     <header>
       {/* Logo section */}
       <Link id="header-logo-container" to="/">
-        <img src="/src/assets/logo.png" alt="PCFNZ logo" />
+        <img src="/src/assets/graphics/logo.png" alt="PCFNZ logo" />
       </Link>
 
       {/* Hamburger menu toggle */}
@@ -45,7 +52,7 @@ export default function PageHeader(): JSX.Element {
       <nav className={isMenuOpen ? "nav-open" : ""}>
         <ul>
           <li>
-            <a href="/">Prostate Information</a>
+            <Link to="/prostate-information">Prostate Information</Link>
           </li>
           <li>
             <a href="/">Get Support</a>
@@ -66,7 +73,7 @@ export default function PageHeader(): JSX.Element {
       <div id="header-button-container">
         <div id="header-search-container">
           <button type="button" onClick={toggleSearch}>
-            <img src="/src/assets/search.svg" alt="Search icon" />
+            <img src="/src/assets/graphics/search.svg" alt="Search icon" />
           </button>
 
           {/* Search Dropdown */}

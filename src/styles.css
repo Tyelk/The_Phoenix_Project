@@ -9,7 +9,8 @@
     --text-main-colour: #0a0a0a;
     --text-secondary-colour: #f5f5f5;
     --link-hover-colour: #107dad;
-    --shadow-colour: #00000031;
+    --shadow-colour: #00000050;
+    --dark-shadow-colour: #00000080;
     --faded-outline-colour: #cbd5e1;
     --brand-hover-colour: #03679e;
     --full-white-colour: #ffffff;
@@ -50,6 +51,15 @@ h2 {
 h3 {
     font-size: 1.5rem;
     font-weight: bold;
+}
+
+h4 {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.important-text {
+    font-weight: 600;
 }
 
 
@@ -199,17 +209,16 @@ nav ul li a:hover {
 }
 /* HOME */
 #content-first {
-    background-image: url("/src/assets/pcfnz-grey-man.jpg");
-    background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 60% 50%;
     width: 100%;
     height: 40em;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 #content-first h1 {
@@ -279,6 +288,99 @@ nav ul li a:hover {
 .donate-input-section label {
     padding-left: 20px;
     font-weight: 500;
+}
+/* CONTENT PAGE */
+.content-page-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-page-tab-sidebar {
+    background-color: var(--secondary-colour);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    position: sticky;
+    top: 5rem;
+    width: 12rem;
+    flex-shrink: 0;
+    height: calc(100vh - 5rem);
+    overflow-y: auto;
+}
+
+.content-page-tab-option {
+    color: var(--text-secondary-colour);
+    font-weight: 500;
+}
+
+.content-page-tab-option:hover {
+    color: var(--link-hover-colour);
+    transition: color 0.5s ease;
+}
+
+.selected-tab {
+    color: var(--tertirary-colour);
+}
+
+.content-page-main-area {
+    width: 100%;
+    padding: 0px 20px 50px;
+}
+
+.content-page-main-area h2 {
+    padding-top: 20px;
+    font-weight: 500;
+    color: var(--text-main-colour);
+}
+
+.content-page-main-area p {
+    padding: 10px 0px;
+}
+
+.content-page-main-area ul {
+    padding-left: 1.5rem;
+    list-style-position: outside;
+}
+
+.content-page-main-area img {
+    padding-top: 10px;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+.content-main-area-header {
+    position: relative;
+    overflow: hidden;
+    background-size: auto 150%;
+    background-position: 60% 60%;
+    width: 100%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-main-area-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--dark-shadow-colour);
+}
+
+.content-main-area-header  > * {
+    position: relative;
+}
+
+.content-main-area-header h1 {
+    color: var(--text-secondary-colour);
+}
+
+.sidebar-toggle-btn,
+.sidebar-backdrop {
+  display: none;
 }
 
 
@@ -481,9 +583,16 @@ footer ul li a:hover {
         background-color: var(--filler-colour);
     }
 
-    /* Darken image as screen shrinks to make text easier to read*/
-    #content-first {
-        background-image: linear-gradient(var(--shadow-colour), var(--shadow-colour)), url("/src/assets/pcfnz-grey-man.jpg");
+    /* Darken home page image as screen shrinks to make text easier to read */
+    #content-first::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: var(--shadow-colour);
+    }
+
+    #content-first > * {
+        position: relative;
     }
 
     #content-first h1 {
@@ -524,5 +633,41 @@ footer ul li a:hover {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+    /* turn sidebar into togglable section */
+    .sidebar-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 6rem;
+        left: 1rem;
+        z-index: 100;
+        box-shadow: 0 5px 10px var(--shadow-colour);
+    }
+
+    .sidebar-backdrop {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background-color: var(--shadow-colour);
+        z-index: 100;
+    }
+
+    .content-page-tab-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        max-width: 80vw;
+        z-index: 200;
+        padding-top: 5rem;
+        box-shadow: 5px 0 15px var(--shadow-colour);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .content-page-tab-sidebar.is-open {
+        transform: translateX(0);
     }
 }

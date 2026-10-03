@@ -81,7 +81,7 @@ export default function Donate(): JSX.Element {
       </div>
 
       {/* missing popup */}
-      {!isPopupOpen && <MissingPopup onClose={togglePopup} />}
+      {isPopupOpen && <MissingPopup onClose={togglePopup} />}
     </div>
   );
 }

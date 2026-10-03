@@ -1,12 +1,17 @@
 import type { JSX } from "react/jsx-runtime";
-import GameIcon from "./GameIcon";
-import HelpIcon from "./HelpIcon";
-import ResearchIcon from "./ResearchIcon";
+import GameIcon from "./icons/GameIcon";
+import HelpIcon from "./icons/HelpIcon";
+import ResearchIcon from "./icons/ResearchIcon";
 
 export default function Home(): JSX.Element {
   return (
     <div className="page-content">
-      <div id="content-first">
+      <div
+        id="content-first"
+        style={{
+          backgroundImage: "url(/src/assets/images/pcfnz-grey-man.jpg)",
+        }}
+      >
         <h1>
           1 in 8 men will be diagnosed with prostate cancer during their
           lifetime
