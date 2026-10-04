@@ -14,6 +14,8 @@
     --faded-outline-colour: #cbd5e1;
     --brand-hover-colour: #03679e;
     --full-white-colour: #ffffff;
+
+    --header-height: 5rem;
 }
 
 * {
@@ -40,17 +42,17 @@ ul, ol {
 /* TEXT */
 h1 {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 h2 {
     font-size: 1.7rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 h3 {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 h4 {
@@ -62,10 +64,14 @@ h4 {
     font-weight: 600;
 }
 
+.results-count {
+    font-size: 0.8rem;
+}
 
 
-/* INPUTS */
-input {
+
+/* INPUTS / SELECTS */
+input, select {
     width: 100%;
     padding: 10px 15px;
     border: 1px solid var(--faded-outline-colour);
@@ -100,6 +106,7 @@ a, button {
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 100px;
+    text-decoration: none;
 }
 
 .plain-btn:hover {
@@ -117,7 +124,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    height: 5rem;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,7 +178,7 @@ nav ul li a:hover {
     justify-content: space-between;
     gap: 10px;
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(var(--header-height) + 10px);
     right: 15px;
     background-color: var(--filler-colour);
     padding: 10px;
@@ -324,13 +331,13 @@ nav ul li a:hover {
 }
 
 .content-page-main-area {
+    min-height: 100vh;
     width: 100%;
     padding: 0px 20px 50px;
 }
 
 .content-page-main-area h2 {
     padding-top: 20px;
-    font-weight: 500;
     color: var(--text-main-colour);
 }
 
@@ -351,6 +358,7 @@ nav ul li a:hover {
 }
 
 .content-main-area-header {
+    background-color: var(--brand-colour);
     position: relative;
     overflow: hidden;
     background-size: auto 150%;
@@ -376,11 +384,42 @@ nav ul li a:hover {
 
 .content-main-area-header h1 {
     color: var(--text-secondary-colour);
+    padding: 1rem;
+    text-align: center;
 }
 
 .sidebar-toggle-btn,
 .sidebar-backdrop {
   display: none;
+}
+/* SUPPORT GROUP SEARCH */
+.groups-search-controls {
+    padding-top: 15px;
+}
+
+.group-search-controls select {
+    max-width: 300px;
+}
+
+.groups-results-section {
+    padding-top: 20px;
+}
+
+.groups-results-card-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.groups-card {
+    max-width: 400px;
+}
+
+.groups-card p {
+    padding: 0;
+}
+/* SEARCH PAGE */
+.search-result-card {
+    text-decoration: none;
 }
 
 
@@ -551,7 +590,7 @@ footer ul li a:hover {
 
 
 
-/* MOBILE LAYOUT */
+/* MOBILE/TABLET LAYOUTs */
 @media screen and (max-width: 70em) {
     /* Show hamburger button */
     #hamburger-btn {
@@ -603,6 +642,10 @@ footer ul li a:hover {
         flex-direction: column;
     }
 
+    .groups-results-card-section {
+        grid-template-columns: 1fr;
+    }
+
     footer {
         grid-template-areas: " mail mail mail mail mail mail "
                             " contact contact contact social social social "
@@ -640,7 +683,7 @@ footer ul li a:hover {
         align-items: center;
         justify-content: center;
         position: fixed;
-        top: 6rem;
+        top: calc(var(--header-height) + 10px);
         left: 1rem;
         z-index: 100;
         box-shadow: 0 5px 10px var(--shadow-colour);

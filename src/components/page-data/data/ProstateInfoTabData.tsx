@@ -1,11 +1,11 @@
-import GettingDiagnosedTab from "./prostate-info-tabs/GettingDiagnosedTab";
-import GettingTestedTab from "./prostate-info-tabs/GettingTestedTab";
-import ProstateCancerTab from "./prostate-info-tabs/ProstateCancerTab";
-import ProstateTab from "./prostate-info-tabs/ProstateTab";
-import TreatmentsTab from "./prostate-info-tabs/TreatmentsTab";
-import type { TabItem } from "./TabItem";
+import type { TabItem } from "../../../types/TabItem";
+import GettingDiagnosedTab from "../prostate-info-tabs/GettingDiagnosedTab";
+import GettingTestedTab from "../prostate-info-tabs/GettingTestedTab";
+import ProstateCancerTab from "../prostate-info-tabs/ProstateCancerTab";
+import ProstateTab from "../prostate-info-tabs/ProstateTab";
+import TreatmentsTab from "../prostate-info-tabs/TreatmentsTab";
 
-export const prostateInfoTabsData: TabItem[] = [
+export const prostateInfoTabData: TabItem[] = [
   {
     id: "pi1",
     title: "The Prostate",

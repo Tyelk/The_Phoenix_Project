@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import type { JSX } from "react/jsx-runtime";
 
 export default function PageHeader(): JSX.Element {
@@ -7,6 +7,7 @@ export default function PageHeader(): JSX.Element {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   const [searchInput, setSearchInput] = useState<string>("");
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Close nav menu and search when another page is navigated to
@@ -28,8 +29,7 @@ export default function PageHeader(): JSX.Element {
   const handleSearch = (searchText: String): void => {
     if (!searchText.trim()) return;
 
-    console.log("Searching for:", searchText);
-    // DO SEARCH
+    navigate(`/search?q=${encodeURIComponent(searchInput.trim())}`);
     setIsSearchOpen(false);
     setSearchInput("");
   };
@@ -55,7 +55,7 @@ export default function PageHeader(): JSX.Element {
             <Link to="/prostate-information">Prostate Information</Link>
           </li>
           <li>
-            <a href="/">Get Support</a>
+            <a href="/get-support">Get Support</a>
           </li>
           <li>
             <a href="/">Get Involved</a>

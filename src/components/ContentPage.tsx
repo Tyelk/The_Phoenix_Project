@@ -1,12 +1,22 @@
-import { useState } from "react";
-import { prostateInfoTabsData } from "./page-data/ProstateInfoTabData";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { prostateInfoTabData } from "./page-data/data/ProstateInfoTabData";
+import { getSupportTabData } from "./page-data/data/GetSupportTabData";
 
-export default function ContentPage() {
-  const [activeTabId, setActiveTabId] = useState("pi1"); // id for first page
+interface ContentPageProps {
+  pageType: "pi" | "gs";
+}
+
+export default function ContentPage({ pageType }: ContentPageProps) {
+  const [searchParams] = useSearchParams();
+  const urlTabId = searchParams.get("tab");
+  const [activeTabId, setActiveTabId] = useState(urlTabId || pageType + "1"); // id for first page
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // gets content for tab that is selected
-  const activeTab = prostateInfoTabsData.find((tab) => tab.id === activeTabId);
+  const currentDataSet =
+    pageType === "pi" ? prostateInfoTabData : getSupportTabData;
+  const activeTab = currentDataSet.find((tab) => tab.id === activeTabId);
 
   // tab selected
   const handleTabSelect = (tabId: string): void => {
@@ -14,6 +24,12 @@ export default function ContentPage() {
     setActiveTabId(tabId);
     setIsSidebarOpen(false);
   };
+
+  useEffect(() => {
+    if (urlTabId) {
+      setActiveTabId(urlTabId);
+    }
+  }, [urlTabId]);
 
   return (
     <div className="page-content">
@@ -43,7 +59,7 @@ export default function ContentPage() {
             isSidebarOpen ? "is-open" : ""
           }`}
         >
-          {prostateInfoTabsData.map((tab) => {
+          {currentDataSet.map((tab) => {
             const isActive = tab.id === activeTabId;
             return (
               <a
