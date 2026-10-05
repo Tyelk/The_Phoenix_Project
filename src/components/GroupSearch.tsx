@@ -1,8 +1,18 @@
 import { useMemo, useState } from "react";
-import type { GroupData } from "../types/GroupData";
+import type { GroupDetails } from "../types/GroupDetails";
+import type { EventDetails } from "../types/EventDetails";
+import GroupCard from "./GroupCard";
+import EventCard from "./EventCard";
 
 interface GroupSearchProps {
-  dataSet: GroupData[];
+  dataSet: GroupDetails[] | EventDetails[];
+}
+
+// checks the type of the data
+function isGroupDetails(
+  data: GroupDetails | EventDetails,
+): data is GroupDetails {
+  return "groupName" in data;
 }
 
 export default function GroupSearch({ dataSet }: GroupSearchProps) {
@@ -12,7 +22,7 @@ export default function GroupSearch({ dataSet }: GroupSearchProps) {
   const regions = useMemo(() => {
     const unique = new Set(dataSet.map((g) => g.region));
     return ["All", ...Array.from(unique)];
-  }, []);
+  }, [dataSet]);
 
   // filter groups by region
   const filteredGroups = useMemo(() => {
@@ -22,11 +32,11 @@ export default function GroupSearch({ dataSet }: GroupSearchProps) {
 
       return matchesRegion;
     });
-  }, [selectedRegion]);
+  }, [selectedRegion, dataSet]);
 
   // groups the details by region
   const groupsByRegion = useMemo(() => {
-    const grouped: Record<string, GroupData[]> = {};
+    const grouped: Record<string, (GroupDetails | EventDetails)[]> = {};
 
     filteredGroups.forEach((group) => {
       if (!grouped[group.region]) {
@@ -79,29 +89,13 @@ export default function GroupSearch({ dataSet }: GroupSearchProps) {
             <div key={regionName} className="groups-results-section">
               <h3>{regionName}</h3>
               <div className="groups-results-card-section">
-                {groupsInRegion.map((group) => (
-                  <div key={group.id} className="groups-card">
-                    <h4>{group.groupName}</h4>
-                    <p>
-                      <span className="important-text">Contact:</span>{" "}
-                      {group.contactName}
-                    </p>
-                    <p>
-                      <span className="important-text">Phone:</span>{" "}
-                      {group.phone}
-                    </p>
-                    <p>
-                      <span className="important-text">Email:</span>{" "}
-                      {group.email}
-                    </p>
-                    {group.meetingDetails && (
-                      <p>
-                        <span className="important-text">Details:</span>{" "}
-                        {group.meetingDetails}
-                      </p>
-                    )}
-                  </div>
-                ))}
+                {groupsInRegion.map((data) => {
+                  // use group card for group details only
+                  if (isGroupDetails(data)) {
+                    return <GroupCard key={data.id} data={data} />;
+                  }
+                  return <EventCard key={data.id} data={data} />;
+                })}
               </div>
             </div>
           ))

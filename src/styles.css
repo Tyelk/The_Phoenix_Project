@@ -73,6 +73,10 @@ h4 {
     font-weight: 600;
 }
 
+.italic-text {
+    font-style: italic;
+}
+
 .results-count {
     font-size: 0.8rem;
 }
@@ -358,6 +362,10 @@ nav ul li a:hover {
 .content-page-main-area ul {
     padding-left: 1.5rem;
     list-style-position: outside;
+}
+
+.content-page-main-area li:not(:last-child) {
+    margin-bottom: 0.5rem;
 }
 
 .content-page-main-area img {

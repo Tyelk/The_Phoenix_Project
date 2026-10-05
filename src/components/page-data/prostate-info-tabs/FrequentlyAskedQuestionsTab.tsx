@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { FREQUENTLY_ASKED_QUESTIONS_DATA } from "./page-data/data/FrequentlyAskedQuestionsData";
+import { FREQUENTLY_ASKED_QUESTIONS_DATA } from "../data/FrequentlyAskedQuestionsData";
 
-export default function FrequentlyAskedQuestions() {
+export default function FrequentlyAskedQuestionsTab() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   // toggles faq tab

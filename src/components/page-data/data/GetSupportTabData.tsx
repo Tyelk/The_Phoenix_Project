@@ -1,36 +1,34 @@
 import type { TabItem } from "../../../types/TabItem";
+import CounsellingServiceTab from "../get-support-tabs/CounsellingServiceTab";
+import InformationServiceTab from "../get-support-tabs/InformationServiceTab";
+import PatientGrantsTab from "../get-support-tabs/PatientGrantsTab";
 import ProstFitTab from "../get-support-tabs/ProstFitTab";
 import SupportGroupsTab from "../get-support-tabs/SupportGroupsTab";
 
 export const getSupportTabData: TabItem[] = [
   {
-    id: "gs1",
+    id: "support-groups",
     title: "Support Groups",
     content: <SupportGroupsTab />,
   },
   {
-    id: "gs2",
-    title: "Prostate Cancer",
-    content: <></>,
+    id: "information-service",
+    title: "Information Service",
+    content: <InformationServiceTab />,
   },
   {
-    id: "gs3",
-    title: "stuff",
-    content: <></>,
+    id: "counselling-service",
+    title: "Counselling Service",
+    content: <CounsellingServiceTab />,
   },
   {
-    id: "gs4",
-    title: "stuff",
-    content: <></>,
+    id: "patient-grants",
+    title: "Patient Grants",
+    content: <PatientGrantsTab />,
   },
   {
-    id: "gs5",
+    id: "prost-fit",
     title: "Prost-Fit",
     content: <ProstFitTab />,
-  },
-  {
-    id: "gs6",
-    title: "stuff",
-    content: <></>,
   },
 ];

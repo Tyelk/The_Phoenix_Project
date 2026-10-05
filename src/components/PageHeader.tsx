@@ -58,13 +58,13 @@ export default function PageHeader(): JSX.Element {
             <Link to="/get-support">Get Support</Link>
           </li>
           <li>
-            <a href="/">Get Involved</a>
+            <Link to="/get-involved">Get Involved</Link>
           </li>
           <li>
-            <a href="/">Education & Outreach</a>
+            <Link to="/education-and-outreach">Education & Outreach</Link>
           </li>
           <li>
-            <a href="/">Research</a>
+            <Link to="/research">Research</Link>
           </li>
         </ul>
       </nav>

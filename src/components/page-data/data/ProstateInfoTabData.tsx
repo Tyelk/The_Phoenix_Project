@@ -1,4 +1,6 @@
 import type { TabItem } from "../../../types/TabItem";
+import FrequentlyAskedQuestions from "../prostate-info-tabs/FrequentlyAskedQuestionsTab";
+import DealingWithSideEffectsTab from "../prostate-info-tabs/DealingWithSideEffectsTab";
 import GettingDiagnosedTab from "../prostate-info-tabs/GettingDiagnosedTab";
 import GettingTestedTab from "../prostate-info-tabs/GettingTestedTab";
 import ProstateCancerTab from "../prostate-info-tabs/ProstateCancerTab";
@@ -7,48 +9,38 @@ import TreatmentsTab from "../prostate-info-tabs/TreatmentsTab";
 
 export const prostateInfoTabData: TabItem[] = [
   {
-    id: "pi1",
+    id: "the-prostate",
     title: "The Prostate",
     content: <ProstateTab />,
   },
   {
-    id: "pi2",
+    id: "prostate-cancer",
     title: "Prostate Cancer",
     content: <ProstateCancerTab />,
   },
   {
-    id: "pi3",
+    id: "getting-tested",
     title: "Getting Tested",
     content: <GettingTestedTab />,
   },
   {
-    id: "pi4",
+    id: "getting-diagnosed",
     title: "Getting Diagnosed",
     content: <GettingDiagnosedTab />,
   },
   {
-    id: "pi5",
+    id: "treatments",
     title: "Treatments",
     content: <TreatmentsTab />,
   },
   {
-    id: "pi6",
-    title: "stuff",
-    content: <></>,
+    id: "dealing-with-side-effects",
+    title: "Dealing With Side Effects",
+    content: <DealingWithSideEffectsTab />,
   },
   {
-    id: "pi7",
-    title: "stuff",
-    content: <></>,
-  },
-  {
-    id: "pi8",
-    title: "stuff",
-    content: <></>,
-  },
-  {
-    id: "pi9",
-    title: "stuff",
-    content: <></>,
+    id: "frequently-asked-questions",
+    title: "Frequently Asked Questions",
+    content: <FrequentlyAskedQuestions />,
   },
 ];

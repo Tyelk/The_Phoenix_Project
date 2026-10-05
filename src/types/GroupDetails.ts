@@ -1,4 +1,4 @@
-export interface GroupData {
+export interface GroupDetails {
   id: string;
   region: string;
   groupName: string;

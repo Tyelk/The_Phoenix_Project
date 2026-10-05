@@ -9,7 +9,6 @@ import Content from "./components/ContentPage";
 import PageSearch from "./components/PageSearch";
 import NotFound from "./components/NotFound";
 import QuizGame from "./components/QuizGame";
-import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
 
 const HomePage = () => {
   return <Home />;
@@ -27,16 +26,24 @@ const GetSupportContentPage = () => {
   return <Content pageType="gs" />;
 };
 
+const GetInvolvedContentPage = () => {
+  return <Content pageType="gi" />;
+};
+
+const EducationAndOutreachContentPage = () => {
+  return <Content pageType="eo" />;
+};
+
+const ResearchContentPage = () => {
+  return <Content pageType="r" />;
+};
+
 const PageSearchPage = () => {
   return <PageSearch />;
 };
 
 const QuizGamePage = () => {
   return <QuizGame />;
-};
-
-const FrequentlyAskedQuestionsPage = () => {
-  return <FrequentlyAskedQuestions />;
 };
 
 const NotFoundPage = () => {
@@ -56,9 +63,15 @@ export default function App(): JSX.Element {
           element={<ProstateInfoContentPage />}
         />
         <Route path="/get-support" element={<GetSupportContentPage />} />
+        <Route path="/get-involved" element={<GetInvolvedContentPage />} />
+        <Route
+          path="/education-and-outreach"
+          element={<EducationAndOutreachContentPage />}
+        />
+        <Route path="/research" element={<ResearchContentPage />} />
+
         <Route path="/search" element={<PageSearchPage />} />
         <Route path="/play" element={<QuizGamePage />} />
-        <Route path="/faq" element={<FrequentlyAskedQuestionsPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -1,6 +1,6 @@
-import type { GroupData } from "../../../types/GroupData";
+import type { GroupDetails } from "../../../types/GroupDetails";
 
-export const SUPPORT_GROUP_DATA: GroupData[] = [
+export const SUPPORT_GROUP_DATA: GroupDetails[] = [
   // Northland
   {
     id: "northland1",

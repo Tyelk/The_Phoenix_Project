@@ -2,34 +2,57 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { prostateInfoTabData } from "./page-data/data/ProstateInfoTabData";
 import { getSupportTabData } from "./page-data/data/GetSupportTabData";
+import { getInvolvedTabData } from "./page-data/data/GetInvolvedTabData";
+import { eventsAndOutreachTabData } from "./page-data/data/EventsAndOutreachTabData";
+import { researchTabData } from "./page-data/data/ResearchTabData";
 
 interface ContentPageProps {
-  pageType: "pi" | "gs";
+  pageType: "pi" | "gs" | "gi" | "eo" | "r";
 }
 
 export default function ContentPage({ pageType }: ContentPageProps) {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const urlTabId = searchParams.get("tab");
-  const [activeTabId, setActiveTabId] = useState(urlTabId || pageType + "1"); // id for first page
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // gets content for tab that is selected
+  // gets the appropriate set of data
   const currentDataSet =
-    pageType === "pi" ? prostateInfoTabData : getSupportTabData;
+    pageType === "pi"
+      ? prostateInfoTabData
+      : pageType === "gs"
+        ? getSupportTabData
+        : pageType === "gi"
+          ? getInvolvedTabData
+          : pageType === "eo"
+            ? eventsAndOutreachTabData
+            : researchTabData;
+
+  // goes to the first tab on the page
+  const defaultTabId = currentDataSet[0].id || "";
+
+  const [activeTabId, setActiveTabId] = useState<string>(
+    urlTabId || defaultTabId, // goes to selected tab or the default
+  );
+  const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
+
+  // check which tab is selected
   const activeTab = currentDataSet.find((tab) => tab.id === activeTabId);
 
   // tab selected
   const handleTabSelect = (tabId: string): void => {
     // set current tab and hide sidebar on small screens
     setActiveTabId(tabId);
+    setSearchParams({ tab: tabId }, { replace: true });
     setIsSidebarOpen(false);
   };
 
+  // udpate url to match tab
   useEffect(() => {
-    if (urlTabId) {
+    if (urlTabId && urlTabId !== activeTabId) {
       setActiveTabId(urlTabId);
+    } else if (!urlTabId) {
+      setActiveTabId(defaultTabId);
     }
-  }, [urlTabId]);
+  }, [urlTabId, defaultTabId]);
 
   return (
     <div className="page-content">
@@ -38,8 +61,6 @@ export default function ContentPage({ pageType }: ContentPageProps) {
         type="button"
         className="sidebar-toggle-btn plain-btn"
         onClick={() => setIsSidebarOpen((prev) => !prev)}
-        aria-expanded={isSidebarOpen}
-        aria-label="Toggle Sidebar Topics"
       >
         {">"}
       </button>

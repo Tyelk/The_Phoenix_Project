@@ -14,17 +14,17 @@ export const SEARCH_ITEM_DATA: SearchItem[] = [
     path: "/donate",
   },
   {
-    id: "pi1",
+    id: "page-the-prostate",
     title: "The Prostate",
     snippet:
       "Learn about what the prostate is and where it is located in the body.",
-    path: "/prostate-information?tab=pi1",
+    path: "/prostate-information?tab=the-prostate",
   },
   {
-    id: "pi2",
+    id: "page-prostate-cancer",
     title: "Prostate Cancer Symptoms & Testing",
     snippet: "Understanding PSA tests, biopsies, and early warning signs.",
-    path: "/prostate-information?tab=pi2",
+    path: "/prostate-information?tab=prostate-cancer",
   },
   {
     id: "idk",

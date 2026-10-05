@@ -37,7 +37,10 @@ export default function Home(): JSX.Element {
               our frequently asked questions page to get a head start on your
               journey!
             </p>
-            <Link to="/faq" className="plain-btn">
+            <Link
+              to="/prostate-information?tab=frequently-asked-questions"
+              className="plain-btn"
+            >
               FAQ
             </Link>
           </div>
