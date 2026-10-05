@@ -1,14 +1,15 @@
 import type { JSX } from "react/jsx-runtime";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PageHeader from "./components/PageHeader";
 import PageFooter from "./components/PageFooter";
 import Home from "./components/Home";
 import ChatBotPopup from "./components/ChatBotPopup";
 import Donate from "./components/Donate";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content from "./components/ContentPage";
 import PageSearch from "./components/PageSearch";
 import NotFound from "./components/NotFound";
 import QuizGame from "./components/QuizGame";
+import FrequentlyAskedQuestions from "./components/FrequentlyAskedQuestions";
 
 const HomePage = () => {
   return <Home />;
@@ -34,6 +35,10 @@ const QuizGamePage = () => {
   return <QuizGame />;
 };
 
+const FrequentlyAskedQuestionsPage = () => {
+  return <FrequentlyAskedQuestions />;
+};
+
 const NotFoundPage = () => {
   return <NotFound />;
 };
@@ -53,6 +58,7 @@ export default function App(): JSX.Element {
         <Route path="/get-support" element={<GetSupportContentPage />} />
         <Route path="/search" element={<PageSearchPage />} />
         <Route path="/play" element={<QuizGamePage />} />
+        <Route path="/faq" element={<FrequentlyAskedQuestionsPage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

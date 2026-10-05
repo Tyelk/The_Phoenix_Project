@@ -21,28 +21,34 @@ export default function PageSearch() {
           <h1>Search Results</h1>
         </div>
 
-        <p className="results-count">
-          (Showing {results.length} result
-          {results.length === 1 ? "" : "s"} for{" "}
-          <span className="important-text results-count">"{query}"</span>)
-        </p>
-
-        {/* Show results in a list / or show message if nothing found */}
-        {results.length === 0 ? (
-          <p>
-            No matches found. Try searching for keywords like "Support",
-            "Symptoms", or "Donate".
+        <div className="content-main-area-body">
+          <p className="results-count">
+            (Showing {results.length} result
+            {results.length === 1 ? "" : "s"} for{" "}
+            <span className="important-text results-count">"{query}"</span>)
           </p>
-        ) : (
-          <div className="search-results-list">
-            {results.map((item) => (
-              <Link key={item.id} to={item.path} className="search-result-card">
-                <h3>{item.title}</h3>
-                <p>{item.snippet}</p>
-              </Link>
-            ))}
-          </div>
-        )}
+
+          {/* Show results in a list / or show message if nothing found */}
+          {results.length === 0 ? (
+            <p>
+              No matches found. Try searching for keywords like "Support",
+              "Symptoms", or "Donate".
+            </p>
+          ) : (
+            <div className="search-results-list">
+              {results.map((item) => (
+                <Link
+                  key={item.id}
+                  to={item.path}
+                  className="search-result-card"
+                >
+                  <h3>{item.title}</h3>
+                  <p>{item.snippet}</p>
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

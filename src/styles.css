@@ -342,7 +342,6 @@ nav ul li a:hover {
 .content-page-main-area {
     min-height: var(--content-min-page-height);
     width: 100%;
-    padding: 0px 20px 50px;
     display: flex;
     flex-direction: column;
 }
@@ -397,6 +396,10 @@ nav ul li a:hover {
     color: var(--text-secondary-colour);
     padding: 1rem;
     text-align: center;
+}
+
+.content-main-area-body {
+    padding: 1.5rem 2rem 4rem;
 }
 
 .sidebar-toggle-btn,
@@ -480,6 +483,34 @@ nav ul li a:hover {
 .disabled-answer-btn {
     cursor: not-allowed;
     pointer-events: none;
+}
+/* FAQ */
+.faq-item {
+    border-bottom: 1px solid var(--faded-outline-colour);
+    padding: 1.2rem 0;
+}
+
+.faq-question-btn {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.faq-question {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.faq-icon {
+    color: var(--brand-colour);
+    font-size: 1.6rem;
+}
+
+.faq-answer {
+    padding: 0 1rem;
 }
 /* PAGE NOT FOUND (404) */
 .centered-content {

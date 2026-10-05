@@ -37,9 +37,9 @@ export default function Home(): JSX.Element {
               our frequently asked questions page to get a head start on your
               journey!
             </p>
-            <button type="button" className="plain-btn">
+            <Link to="/faq" className="plain-btn">
               FAQ
-            </button>
+            </Link>
           </div>
 
           <div className="home-card">
