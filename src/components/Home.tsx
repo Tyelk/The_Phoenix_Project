@@ -2,6 +2,7 @@ import type { JSX } from "react/jsx-runtime";
 import GameIcon from "./icons/GameIcon";
 import HelpIcon from "./icons/HelpIcon";
 import ResearchIcon from "./icons/ResearchIcon";
+import { Link } from "react-router-dom";
 
 export default function Home(): JSX.Element {
   return (
@@ -48,9 +49,9 @@ export default function Home(): JSX.Element {
               or want to test your knowledge about the subject? Try out our
               quiz!
             </p>
-            <button type="button" className="plain-btn">
+            <Link to="/play" className="plain-btn">
               Game
-            </button>
+            </Link>
           </div>
 
           <div className="home-card">

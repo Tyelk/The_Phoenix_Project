@@ -14,8 +14,13 @@
     --faded-outline-colour: #cbd5e1;
     --brand-hover-colour: #03679e;
     --full-white-colour: #ffffff;
+    --correct-answer-colour: #2DB351;
+    --incorrect-answer-colour: #5E0404;
+    --dim-answer-colour: #333333;
 
     --header-height: 5rem;
+    --content-header-height: 20em;
+    --content-min-page-height: 100vh;
 }
 
 * {
@@ -35,6 +40,10 @@ body {
 
 ul, ol {
     list-style-position: inside;
+}
+
+.hidden-element {
+    visibility: hidden;
 }
 
 
@@ -331,9 +340,11 @@ nav ul li a:hover {
 }
 
 .content-page-main-area {
-    min-height: 100vh;
+    min-height: var(--content-min-page-height);
     width: 100%;
     padding: 0px 20px 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .content-page-main-area h2 {
@@ -364,7 +375,7 @@ nav ul li a:hover {
     background-size: auto 150%;
     background-position: 60% 60%;
     width: 100%;
-    height: 20em;
+    height: var(--content-header-height);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -420,6 +431,65 @@ nav ul li a:hover {
 /* SEARCH PAGE */
 .search-result-card {
     text-decoration: none;
+}
+/* QUIZ GAME */
+.quiz-game-content {
+    padding: 30px;
+}
+
+.quiz-game-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.quiz-game-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 0;
+}
+
+.game-question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 12rem;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.correct-answer-btn {
+    background-color: var(--correct-answer-colour);
+}
+
+.incorrect-answer-btn {
+    background-color: var(--incorrect-answer-colour);
+}
+
+.dim-answer-btn {
+    background-color: var(--dim-answer-colour);
+}
+
+.disabled-answer-btn {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+/* PAGE NOT FOUND (404) */
+.centered-content {
+    padding: 30px;
+    display: flex;
+    gap: 5rem;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 

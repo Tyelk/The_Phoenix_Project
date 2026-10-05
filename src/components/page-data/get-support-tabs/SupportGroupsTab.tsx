@@ -1,4 +1,4 @@
-import { NZ_SUPPORT_GROUPS } from "../data/SupportGroupDetails";
+import { SUPPORT_GROUP_DATA } from "../data/SupportGroupData";
 import GroupSearch from "../../GroupSearch";
 
 export default function SupportGroupsTab() {
@@ -37,7 +37,7 @@ export default function SupportGroupsTab() {
         advice.
       </p>
 
-      <GroupSearch dataSet={NZ_SUPPORT_GROUPS} />
+      <GroupSearch dataSet={SUPPORT_GROUP_DATA} />
     </>
   );
 }

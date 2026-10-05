@@ -55,7 +55,7 @@ export default function PageHeader(): JSX.Element {
             <Link to="/prostate-information">Prostate Information</Link>
           </li>
           <li>
-            <a href="/get-support">Get Support</a>
+            <Link to="/get-support">Get Support</Link>
           </li>
           <li>
             <a href="/">Get Involved</a>

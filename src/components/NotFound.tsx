@@ -8,11 +8,13 @@ export default function NotFound() {
           <h1>404 - Page Not Found</h1>
         </div>
 
-        <p>Sorry, that page could not be found.</p>
+        <div className="centered-content">
+          <p>Sorry, that page could not be found.</p>
 
-        <Link to="/" className="plain-btn">
-          Go back to Home Page
-        </Link>
+          <Link to="/" className="plain-btn">
+            Go back to Home Page
+          </Link>
+        </div>
       </div>
     </div>
   );

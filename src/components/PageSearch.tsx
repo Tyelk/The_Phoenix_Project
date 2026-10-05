@@ -1,12 +1,12 @@
 import { useSearchParams, Link } from "react-router-dom";
-import { searchItems } from "./page-data/data/SearchItems";
+import { SEARCH_ITEM_DATA } from "./page-data/data/SearchItemData";
 
 export default function PageSearch() {
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q") || ""; // get query data
 
   // check both title and snippet for match
-  const results = searchItems.filter((item) => {
+  const results = SEARCH_ITEM_DATA.filter((item) => {
     const q = query.toLowerCase();
     return (
       item.title.toLowerCase().includes(q) ||

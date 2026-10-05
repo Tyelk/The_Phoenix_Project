@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Content from "./components/ContentPage";
 import PageSearch from "./components/PageSearch";
 import NotFound from "./components/NotFound";
+import QuizGame from "./components/QuizGame";
 
 const HomePage = () => {
   return <Home />;
@@ -25,6 +26,18 @@ const GetSupportContentPage = () => {
   return <Content pageType="gs" />;
 };
 
+const PageSearchPage = () => {
+  return <PageSearch />;
+};
+
+const QuizGamePage = () => {
+  return <QuizGame />;
+};
+
+const NotFoundPage = () => {
+  return <NotFound />;
+};
+
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
@@ -38,9 +51,10 @@ export default function App(): JSX.Element {
           element={<ProstateInfoContentPage />}
         />
         <Route path="/get-support" element={<GetSupportContentPage />} />
-        <Route path="/search" element={<PageSearch />} />
+        <Route path="/search" element={<PageSearchPage />} />
+        <Route path="/play" element={<QuizGamePage />} />
 
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
 
       <ChatBotPopup />

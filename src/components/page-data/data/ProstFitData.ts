@@ -1,6 +1,6 @@
 import type { GroupData } from "../../../types/GroupData";
 
-export const PROST_FIT_GROUPS: GroupData[] = [
+export const PROST_FIT_DATA: GroupData[] = [
   // Northland
   {
     id: "northland1",

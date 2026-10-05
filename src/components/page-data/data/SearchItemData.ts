@@ -1,12 +1,6 @@
-export interface SearchItem {
-  id: string;
-  title: string;
-  snippet: string;
-  path: string;
-}
+import type { SearchItem } from "../../../types/SearchItem";
 
-export const searchItems: SearchItem[] = [
-  // Static Pages
+export const SEARCH_ITEM_DATA: SearchItem[] = [
   {
     id: "page-home",
     title: "Home Page",

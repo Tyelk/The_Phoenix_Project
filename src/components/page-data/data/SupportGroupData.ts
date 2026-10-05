@@ -1,6 +1,6 @@
 import type { GroupData } from "../../../types/GroupData";
 
-export const NZ_SUPPORT_GROUPS: GroupData[] = [
+export const SUPPORT_GROUP_DATA: GroupData[] = [
   // Northland
   {
     id: "northland1",

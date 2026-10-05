@@ -1,5 +1,5 @@
 import GroupSearch from "../../GroupSearch";
-import { PROST_FIT_GROUPS } from "../data/ProstFitDetails";
+import { PROST_FIT_DATA } from "../data/ProstFitData";
 
 export default function ProstFitTab() {
   return (
@@ -62,7 +62,7 @@ export default function ProstFitTab() {
 
       <p>Prost-FIT is proudly supported by the Dry July NZ Trust.</p>
 
-      <GroupSearch dataSet={PROST_FIT_GROUPS} />
+      <GroupSearch dataSet={PROST_FIT_DATA} />
     </>
   );
 }
