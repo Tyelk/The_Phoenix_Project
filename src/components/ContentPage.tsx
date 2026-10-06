@@ -3,8 +3,8 @@ import { useSearchParams } from "react-router-dom";
 import { prostateInfoTabData } from "./page-data/data/ProstateInfoTabData";
 import { getSupportTabData } from "./page-data/data/GetSupportTabData";
 import { getInvolvedTabData } from "./page-data/data/GetInvolvedTabData";
-import { eventsAndOutreachTabData } from "./page-data/data/EventsAndOutreachTabData";
 import { researchTabData } from "./page-data/data/ResearchTabData";
+import { educationAndOutreachTabData } from "./page-data/data/EducationAndOutreachTabData";
 
 interface ContentPageProps {
   pageType: "pi" | "gs" | "gi" | "eo" | "r";
@@ -23,7 +23,7 @@ export default function ContentPage({ pageType }: ContentPageProps) {
         : pageType === "gi"
           ? getInvolvedTabData
           : pageType === "eo"
-            ? eventsAndOutreachTabData
+            ? educationAndOutreachTabData
             : researchTabData;
 
   // goes to the first tab on the page

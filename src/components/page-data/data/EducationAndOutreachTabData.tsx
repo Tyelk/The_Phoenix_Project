@@ -1,9 +1,9 @@
 import type { TabItem } from "../../../types/TabItem";
-import EducationResourcesTab from "../events-and-outreach-tabs/EducationResourcesTab";
-import EventsTab from "../events-and-outreach-tabs/EventsTab";
-import RequestAPresentationTab from "../events-and-outreach-tabs/RequestAPresentationTab";
+import EducationResourcesTab from "../education-and-outreach-tabs/EducationResourcesTab";
+import EventsTab from "../education-and-outreach-tabs/EventsTab";
+import RequestAPresentationTab from "../education-and-outreach-tabs/RequestAPresentationTab";
 
-export const eventsAndOutreachTabData: TabItem[] = [
+export const educationAndOutreachTabData: TabItem[] = [
   {
     id: "events",
     title: "Events",
