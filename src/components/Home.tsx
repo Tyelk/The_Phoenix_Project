@@ -60,13 +60,12 @@ export default function Home(): JSX.Element {
           <div className="home-card">
             <ResearchIcon className="card-icon" />
             <p>
-              Looking for additional resources to further your understanding of
-              prostate cancer and how it can be treated? Dive into our research
-              papers!
+              Curious as to how the PCFNZ supports prostate cancer research and
+              what the donations got to? Check out our research contributions!
             </p>
-            <button type="button" className="plain-btn">
+            <Link to="/research" className="plain-btn">
               Research
-            </button>
+            </Link>
           </div>
         </div>
       </div>

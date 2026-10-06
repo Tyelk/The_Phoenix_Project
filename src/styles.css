@@ -17,7 +17,7 @@
     --correct-answer-colour: #2DB351;
     --incorrect-answer-colour: #5E0404;
     --dim-answer-colour: #333333;
-
+    /* SIZES */
     --header-height: 5rem;
     --content-header-height: 20em;
     --content-min-page-height: 100vh;
