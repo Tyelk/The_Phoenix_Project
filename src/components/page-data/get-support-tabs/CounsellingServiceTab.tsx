@@ -5,7 +5,7 @@ export default function CounsellingServiceTab() {
         className="content-main-area-header"
         style={{
           backgroundImage:
-            "url(/src/assets/images/header-image-counselling-service.jpg)",
+            "url(/src/assets/images/header-image-counselling-service.png)",
         }}
       >
         <h1>Counselling Service</h1>

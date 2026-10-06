@@ -18,12 +18,15 @@ export default function Home(): JSX.Element {
           lifetime
         </h1>
         <div id="content-first-button-section">
-          <button type="button" className="plain-btn">
+          <Link
+            to="/prostate-information?tab=prostate-cancer"
+            className="plain-btn"
+          >
             What is prostate cancer?
-          </button>
-          <button type="button" className="plain-btn">
-            What will happen to my loved one?
-          </button>
+          </Link>
+          <Link to="/get-support?tab=support-groups" className="plain-btn">
+            Is support available?
+          </Link>
         </div>
       </div>
 
