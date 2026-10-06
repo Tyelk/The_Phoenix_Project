@@ -9,6 +9,7 @@ import Content from "./components/ContentPage";
 import PageSearch from "./components/PageSearch";
 import NotFound from "./components/NotFound";
 import QuizGame from "./components/QuizGame";
+import ScrollToTop from "./components/ScrollToPageTop";
 
 const HomePage = () => {
   return <Home />;
@@ -53,6 +54,8 @@ const NotFoundPage = () => {
 export default function App(): JSX.Element {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <PageHeader />
 
       <Routes>

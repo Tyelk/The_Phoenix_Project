@@ -72,12 +72,7 @@ export default function ProstateCancerTab() {
           improved treatments available.
         </p>
 
-        <p>
-          Source:{" "}
-          <a href="https://www.tewhatuora.govt.nz/">
-            The New Zealand Cancer Registry
-          </a>
-        </p>
+        <p>Source: The New Zealand Cancer Registry</p>
 
         <h2>Types of prostate cancer</h2>
 
