@@ -1,11 +1,26 @@
+import { useState } from "react";
 import type { JSX } from "react/jsx-runtime";
+import MissingPopup from "./MissingPopup";
 
 export default function PageFooter(): JSX.Element {
+  const [isPopupOpen, setIsPopupOpen] = useState<boolean>(false);
+
+  // toggle missing content popup
+  const togglePopup = (): void => {
+    setIsPopupOpen((prev) => !prev);
+  };
+
   return (
     <footer>
       {/* Mailing */}
       <div className="footer-links" id="footer-mail">
-        <button className="plain-btn">Join the mailing list!</button>
+        <button
+          type="button"
+          className="plain-btn"
+          onClick={() => togglePopup()}
+        >
+          Join the mailing list!
+        </button>
       </div>
 
       {/* Contacts */}
@@ -26,13 +41,37 @@ export default function PageFooter(): JSX.Element {
         <p className="footer-header">Socials</p>
         <ul>
           <li>
-            <a href="/">Facebook</a>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                togglePopup();
+              }}
+            >
+              Facebook
+            </a>
           </li>
           <li>
-            <a href="/">Instagram</a>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                togglePopup();
+              }}
+            >
+              Instagram
+            </a>
           </li>
           <li>
-            <a href="/">Linkedin</a>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                togglePopup();
+              }}
+            >
+              Linkedin
+            </a>
           </li>
         </ul>
       </div>
@@ -41,14 +80,33 @@ export default function PageFooter(): JSX.Element {
       <div id="footer-details">
         <ul>
           <li>
-            <a href="/">Terms & Conditions</a>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                togglePopup();
+              }}
+            >
+              Terms & Conditions
+            </a>
           </li>
           <li>
-            <a href="/">Privacy</a>
+            <a
+              href="/"
+              onClick={(e) => {
+                e.preventDefault();
+                togglePopup();
+              }}
+            >
+              Privacy
+            </a>
           </li>
         </ul>
         <p>&copy; 2026 Prostate Cancer Foundation NZ</p>
       </div>
+
+      {/* missing popup */}
+      {isPopupOpen && <MissingPopup onClose={togglePopup} />}
     </footer>
   );
 }
