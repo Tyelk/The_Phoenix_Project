@@ -102,7 +102,11 @@ export default function PageFooter(): JSX.Element {
             </a>
           </li>
         </ul>
-        <p>&copy; 2026 Prostate Cancer Foundation NZ</p>
+        <p>
+          &copy; 2026 Prostate Cancer Foundation NZ <br />
+          (Made for demonstration purposes only, all content is owned by the
+          PCFNZ)
+        </p>
       </div>
 
       {/* missing popup */}

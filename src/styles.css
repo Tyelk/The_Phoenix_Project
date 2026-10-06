@@ -592,6 +592,8 @@ footer ul li a:hover {
 
 #footer-details p {
     font-size: 0.9rem;
+    max-width: 20rem;
+    text-align: center;
 }
 
 
