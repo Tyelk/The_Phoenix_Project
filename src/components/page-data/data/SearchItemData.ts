@@ -9,7 +9,7 @@ export const SEARCH_ITEM_DATA: SearchItem[] = [
   },
   {
     id: "page-donate",
-    title: "Donate & Support",
+    title: "Donate",
     snippet: "Make a donation directly to the PCFNZ.",
     path: "/donate",
   },
@@ -60,7 +60,7 @@ export const SEARCH_ITEM_DATA: SearchItem[] = [
     title: "Frequently asked Questions",
     snippet:
       "Check out the frequently asked questions (FAQ) to get an overview of important prostate cancer information.",
-    path: "/prostate-information?tab=frequently-asked-questionss",
+    path: "/prostate-information?tab=frequently-asked-questions",
   },
 
   // Get Support

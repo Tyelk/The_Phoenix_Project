@@ -28,7 +28,7 @@ export const getSupportTabData: TabItem[] = [
   },
   {
     id: "prost-fit",
-    title: "Prost-Fit",
+    title: "Prost-FIT",
     content: <ProstFitTab />,
   },
 ];
