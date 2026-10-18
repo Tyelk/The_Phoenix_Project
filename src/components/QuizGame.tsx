@@ -8,6 +8,7 @@ export default function QuizGame() {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [isAnswered, setIsAnswered] = useState<boolean>(false);
   const [isFinished, setIsFinished] = useState<boolean>(false);
+  const [correctQuestionCount, setCorrectQuestionCount] = useState<number>(0);
 
   const currentQuestion = QUIZ_QUESTION_DATA[currentQuestionIndex];
 
@@ -27,6 +28,7 @@ export default function QuizGame() {
     setCurrentQuestionIndex(0);
     clearAnswer();
     setIsFinished(false);
+    setCorrectQuestionCount(0); // REset score
   };
 
   // handle answer selection
@@ -34,6 +36,11 @@ export default function QuizGame() {
     if (isAnswered) return; // Abort if a answer selected
     setSelectedAnswer(selectedIndex);
     setIsAnswered(true);
+
+    // increment count for correct answers
+    if (selectedIndex === currentQuestion.answer) {
+      setCorrectQuestionCount((prev) => prev + 1);
+    }
   };
 
   // handle next question
@@ -59,7 +66,7 @@ export default function QuizGame() {
       } else {
         buttonClass += " dim-answer-btn";
       }
-      buttonClass += " disabled-answer-btn";
+      buttonClass += " disabled-btn";
     }
 
     return buttonClass;
@@ -76,6 +83,10 @@ export default function QuizGame() {
           <div className="quiz-game-content">
             {/* quiz header */}
             <div className="quiz-game-header">
+              <p>
+                Question {currentQuestionIndex + 1} /{" "}
+                {QUIZ_QUESTION_DATA.length}
+              </p>
               <button type="button" className="plain-btn" onClick={togglePlay}>
                 Restart
               </button>
@@ -104,7 +115,7 @@ export default function QuizGame() {
             <div className="quiz-game-footer">
               <button
                 type="button"
-                className={`plain-btn pulsing-glow ${isAnswered ? "" : "hidden-element"}`}
+                className={`plain-btn ${isAnswered ? "pulsing-next-glow" : "disabled-btn dim-answer-btn"}`}
                 onClick={handleNextQuestion}
               >
                 {currentQuestionIndex < QUIZ_QUESTION_DATA.length - 1
@@ -117,12 +128,16 @@ export default function QuizGame() {
 
         {/* end/finish screen*/}
         {isFinished && (
-          <div className="centered-content">
-            <h3>Thats all the questions!</h3>
+          <div className="end-quiz-screen">
+            <h3>Well Done!</h3>
+            <p className="quiz-results-count">
+              You got {correctQuestionCount} out of {QUIZ_QUESTION_DATA.length}{" "}
+              correct!
+            </p>
             <p>
-              Did you get them all correct? If not think about exploring the
-              website to find the answers, who knows that information may save
-              your life!
+              How did you do? Think about exploring the website or trying out
+              Prostate Pal to find anything you may have been unsure of, who
+              knows that information may save your life!
             </p>
             <button type="button" className="plain-btn" onClick={togglePlay}>
               Finish

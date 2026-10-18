@@ -62,7 +62,7 @@ export default function GroupSearch({ dataSet }: GroupSearchProps) {
           value={selectedRegion}
           onChange={(e) => setSelectedRegion(e.target.value)}
           onClick={() => hideAlert()}
-          className={`${isAlerting ? "pulsing-alert-glow " : ""}`}
+          className={`${isAlerting ? "pulsing-alert-glow" : ""}`}
         >
           {regions.map((region) => (
             <option key={region} value={region}>
