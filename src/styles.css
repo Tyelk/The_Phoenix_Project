@@ -319,10 +319,20 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: center;
 }
+
+#donate-content .content-main-area-header {
+    margin-bottom: 40px;
+}
+
+#donate-content button {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
 .donate-input-section {
     width: 60%;
     min-width: 400px;
-    padding: 10px;
+    padding: 15px;
 }
 
 .donate-input-section label {

@@ -13,7 +13,9 @@ export default function Donate(): JSX.Element {
   return (
     <div className="page-content">
       <div id="donate-content">
-        <h1>Donate</h1>
+        <div className="content-main-area-header">
+          <h1>Donate</h1>
+        </div>
 
         <div className="donate-input-section">
           <label htmlFor="donation-amount">Amount</label>
@@ -71,6 +73,7 @@ export default function Donate(): JSX.Element {
             placeholder=""
           ></input>
         </div>
+
         <button
           type="button"
           className="plain-btn"
