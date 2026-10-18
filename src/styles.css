@@ -13,6 +13,7 @@
     --dark-shadow-colour: #00000080;
     --pulse-shadow-colour: #00000000;
     --faded-outline-colour: #cbd5e1;
+    --faded-divide-colour: #e2e2e2;
     --brand-hover-colour: #03679e;
     --full-white-colour: #ffffff;
     --correct-answer-colour: #2DB351;
@@ -33,10 +34,6 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: var(--filler-colour);
 }
 
 ul, ol {
@@ -161,6 +158,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid var(--faded-divide-colour);
 }
 
 header a {
@@ -245,7 +243,8 @@ nav ul li a:hover {
     max-width: 80em;
     width: 100%;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    background-color: var(--filler-colour);
 }
 /* HOME */
 #content-first {
@@ -577,6 +576,7 @@ footer {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: " contact contact mail mail social social "
                         " details details details details details details ";
+    border-top: 1px solid var(--faded-divide-colour);
 }
 
 footer a {
@@ -755,7 +755,7 @@ footer ul li a:hover {
     }
 
     /* Display navigation when menu is opened */
-    nav.nav-open {
+    .nav-open {
         display: block;
     }
 
@@ -766,6 +766,7 @@ footer ul li a:hover {
         height: auto;
         padding: 10px 0;
         background-color: var(--filler-colour);
+        border-bottom: 1px solid var(--faded-divide-colour);
     }
 
     /* Darken home page image as screen shrinks to make text easier to read */

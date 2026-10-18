@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
       </div>
 
       <div id="content-second">
-        <h1>More Data</h1>
+        <h1>Useful Links</h1>
         <div id="content-second-card-section">
           <div className="home-card">
             <HelpIcon className="card-icon" />
