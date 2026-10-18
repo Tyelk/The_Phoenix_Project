@@ -11,6 +11,7 @@
     --link-hover-colour: #107dad;
     --shadow-colour: #00000050;
     --dark-shadow-colour: #00000080;
+    --pulse-shadow-colour: #00000000;
     --faded-outline-colour: #cbd5e1;
     --brand-hover-colour: #03679e;
     --full-white-colour: #ffffff;
@@ -127,6 +128,25 @@ a, button {
     background-color: var(--standout-darker-colour);
     transform: translateY(2px);
     box-shadow: 0 4px 8px var(--shadow-colour);
+}
+
+
+
+/* ANIMATIONS */
+.pulsing-alert-glow {
+    animation: pulse-glow 1.8s infinite;
+}
+
+@keyframes pulse-glow {
+    0% {
+        box-shadow: 0 0 0 0 var(--brand-hover-colour);
+    }
+    70% {
+        box-shadow: 0 0 0 15px var(--pulse-shadow-colour);
+    }
+    100% {
+        box-shadow: 0 0 0 0 var(--pulse-shadow-colour);
+    }
 }
 
 
@@ -415,21 +435,27 @@ nav ul li a:hover {
   display: none;
 }
 /* SUPPORT GROUP SEARCH */
-.groups-search-controls {
+.support-group-search-controls h3 {
+    padding-bottom: 10px;
+}
+ 
+.groups-results-section {
+    padding-bottom: 20px;
+}
+
+.groups-results-section h3 {
     padding-top: 15px;
 }
 
-.group-search-controls select {
-    max-width: 300px;
-}
-
-.groups-results-section {
-    padding-top: 20px;
+.groups-results-section h4 {
+    font-size: 1.2rem;
+    padding-bottom: 5px;
 }
 
 .groups-results-card-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--faded-outline-colour);
 }
 
 .groups-card {
@@ -654,16 +680,15 @@ footer ul li a:hover {
     gap: 8px;
 }
 
-#chatbot-footer button {
+.chatbot-btn {
     background-color: var(--brand-colour);
-    color: var(--text-secondary-colour);
 }
 
-#chatbot-footer button:hover {
+.chatbot-btn:hover {
     background-color: var(--brand-hover-colour);
 }
 
-#chatbot-btn {
+#chatbot-toggle-btn {
     box-shadow: 0 10px 30px var(--shadow-colour);
 }
 

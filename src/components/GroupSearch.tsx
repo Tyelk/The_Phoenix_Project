@@ -17,6 +17,11 @@ function isGroupDetails(
 
 export default function GroupSearch({ dataSet }: GroupSearchProps) {
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [isAlerting, setIsAlerting] = useState(true);
+
+  const hideAlert = () => {
+    setIsAlerting(false); // hides alert
+  };
 
   // gets all unique regions from groups
   const regions = useMemo(() => {
@@ -56,6 +61,8 @@ export default function GroupSearch({ dataSet }: GroupSearchProps) {
         <select
           value={selectedRegion}
           onChange={(e) => setSelectedRegion(e.target.value)}
+          onClick={() => hideAlert()}
+          className={`${isAlerting ? "pulsing-alert-glow " : ""}`}
         >
           {regions.map((region) => (
             <option key={region} value={region}>

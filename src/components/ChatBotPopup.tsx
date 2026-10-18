@@ -4,9 +4,11 @@ import type { JSX } from "react/jsx-runtime";
 export default function ChatBotPopup(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false);
   const [input, setInput] = useState("");
+  const [isAlerting, setIsAlerting] = useState(true);
 
   // toggle chatbot popup
   const togglePopup = (): void => {
+    setIsAlerting(false); // turn of alert once opened
     setIsOpen((prev) => !prev);
   };
 
@@ -35,7 +37,7 @@ export default function ChatBotPopup(): JSX.Element {
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask a question..."
             ></input>
-            <button type="button" className="plain-btn">
+            <button type="button" className="plain-btn chatbot-btn">
               Ask
             </button>
           </div>
@@ -47,8 +49,8 @@ export default function ChatBotPopup(): JSX.Element {
         <button
           type="button"
           onClick={() => togglePopup()}
-          className="plain-btn"
-          id="chatbot-btn"
+          className={`plain-btn chatbot-btn ${isAlerting ? "pulsing-alert-glow" : ""}`}
+          id="chatbot-toggle-btn"
         >
           Chat
         </button>
