@@ -13,6 +13,12 @@ export const SEARCH_ITEM_DATA: SearchItem[] = [
     snippet: "Make a donation directly to the PCFNZ.",
     path: "/donate",
   },
+  {
+    id: "page-game",
+    title: "Game",
+    snippet: "Test your knowledge by taking the PCFNZ quiz!",
+    path: "/game",
+  },
 
   // Prostate Information
   {

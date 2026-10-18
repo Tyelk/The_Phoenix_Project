@@ -55,7 +55,7 @@ export default function Home(): JSX.Element {
               or want to test your knowledge about the subject? Try out our
               quiz!
             </p>
-            <Link to="/play" className="plain-btn">
+            <Link to="/game" className="plain-btn">
               Game
             </Link>
           </div>

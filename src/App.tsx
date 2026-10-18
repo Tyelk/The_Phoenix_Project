@@ -74,7 +74,7 @@ export default function App(): JSX.Element {
         <Route path="/research" element={<ResearchContentPage />} />
 
         <Route path="/search" element={<PageSearchPage />} />
-        <Route path="/play" element={<QuizGamePage />} />
+        <Route path="/game" element={<QuizGamePage />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -476,7 +476,23 @@ nav ul li a:hover {
 }
 /* SEARCH PAGE */
 .search-result-card {
+    display: block;
     text-decoration: none;
+    border-top: 1px solid var(--faded-outline-colour);
+    padding: 10px;
+    transition: background-color 0.5s ease;
+}
+
+.search-result-card:hover {
+    background-color: var(--link-hover-colour);
+}
+
+.search-result-card h3 {
+    font-size: 1.3rem;
+}
+
+.search-result-card p {
+    padding: 0;
 }
 /* QUIZ GAME */
 .quiz-game-content {
