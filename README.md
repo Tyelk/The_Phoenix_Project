@@ -4,7 +4,10 @@ Revamped PCFNZ website.
 
 ## Features
 
-- under construction
+- Clear and minimal page redesign
+- Improved navigation with related page sidebars
+- Prostate Puzzle - a multiple-choice quiz game for prostate knowledge
+- Responsive pages that adjust content for different screen sizes
 
 ## How to Setup
 
