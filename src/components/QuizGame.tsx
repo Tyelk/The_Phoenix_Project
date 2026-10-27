@@ -135,9 +135,9 @@ export default function QuizGame() {
               correct!
             </p>
             <p>
-              How did you do? Think about exploring the website or trying out
-              Prostate Pal to find anything you may have been unsure of, who
-              knows that information may save your life!
+              How did you do? Think you could do better? Try exploring the
+              website or chatting with Prostate Pal to fill any gaps in your
+              knowledge, who knows, that information may just save your life!
             </p>
             <button type="button" className="plain-btn" onClick={togglePlay}>
               Finish
