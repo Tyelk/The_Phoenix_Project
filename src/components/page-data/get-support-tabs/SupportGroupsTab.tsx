@@ -1,6 +1,6 @@
 import { SUPPORT_GROUP_DATA } from "../data/SupportGroupData";
 import GroupSearch from "../../GroupSearch";
-import headerImage from "../assets/images/header-image-support-groups.jpg";
+import headerImage from "../../../assets/images/header-image-support-groups.jpg";
 
 export default function SupportGroupsTab() {
   return (

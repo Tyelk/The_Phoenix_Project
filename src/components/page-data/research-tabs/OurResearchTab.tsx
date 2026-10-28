@@ -1,5 +1,5 @@
-import centreImage from "../assets/images/kathleen-kilgour-centre.png";
-import signImage from "../assets/images/mimr-sign.png";
+import centreImage from "../../../assets/images/kathleen-kilgour-centre.png";
+import signImage from "../../../assets/images/mimr-sign.png";
 
 export default function OurResearchTab() {
   return (

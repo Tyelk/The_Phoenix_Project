@@ -1,4 +1,4 @@
-import headerImage from "../assets/images/header-image-dealing-with-side-effects.jpg";
+import headerImage from "../../../assets/images/header-image-dealing-with-side-effects.jpg";
 
 export default function DealingWithSideEffectsTab() {
   return (

@@ -1,6 +1,6 @@
-import headerImage from "../assets/images/header-image-getting-diagnosed.jpg";
-import gleasonTableImage from "../assets/images/isup-gleason-table.png";
-import stagingTableImage from "../assets/images/staging-table.png";
+import headerImage from "../../../assets/images/header-image-getting-diagnosed.jpg";
+import gleasonTableImage from "../../../assets/images/isup-gleason-table.png";
+import stagingTableImage from "../../../assets/images/staging-table.png";
 
 export default function GettingDiagnosedTab() {
   return (

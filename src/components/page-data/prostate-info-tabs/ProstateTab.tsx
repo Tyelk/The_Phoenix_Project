@@ -1,5 +1,5 @@
-import headerImage from "../assets/images/header-image-prostate.jpg";
-import prostateImage from "../assets/images/prostate-diagram.jpg";
+import headerImage from "../../../assets/images/header-image-prostate.jpg";
+import prostateImage from "../../../assets/images/prostate-diagram.jpg";
 
 export default function ProstateTab() {
   return (

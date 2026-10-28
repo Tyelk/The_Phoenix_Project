@@ -1,4 +1,4 @@
-import headerImage from "../assets/images/header-image-getting-tested.jpg";
+import headerImage from "../../../assets/images/header-image-getting-tested.jpg";
 
 export default function GettingTestedTab() {
   return (

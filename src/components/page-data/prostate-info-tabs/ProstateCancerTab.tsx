@@ -1,5 +1,5 @@
-import headerImage from "../assets/images/header-image-prostate-cancer.jpg";
-import prostatitisImage from "../assets/images/prostatitis-image.png";
+import headerImage from "../../../assets/images/header-image-prostate-cancer.jpg";
+import prostatitisImage from "../../../assets/images/prostatitis-image.png";
 
 export default function ProstateCancerTab() {
   return (

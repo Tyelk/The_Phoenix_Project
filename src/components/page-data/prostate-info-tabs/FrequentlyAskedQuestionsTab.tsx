@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FREQUENTLY_ASKED_QUESTIONS_DATA } from "../data/FrequentlyAskedQuestionsData";
-import headerImage from "../assets/images/header-image-faq.jpg";
+import headerImage from "../../../assets/images/header-image-faq.jpg";
 
 export default function FrequentlyAskedQuestionsTab() {
   const [openId, setOpenId] = useState<number | null>(null);

@@ -1,4 +1,4 @@
-import headerImage from "../assets/images/header-image-treatments.jpg";
+import headerImage from "../../../assets/images/header-image-treatments.jpg";
 
 export default function TreatmentsTab() {
   return (

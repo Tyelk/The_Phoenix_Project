@@ -1,6 +1,6 @@
 import GroupSearch from "../../GroupSearch";
 import { PROST_FIT_DATA } from "../data/ProstFitData";
-import headerImage from "../assets/images/header-image-prost-fit.jpg";
+import headerImage from "../../../assets/images/header-image-prost-fit.jpg";
 
 export default function ProstFitTab() {
   return (

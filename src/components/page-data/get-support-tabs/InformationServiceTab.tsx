@@ -1,4 +1,4 @@
-import headerImage from "../assets/images/header-image-information-service.jpg";
+import headerImage from "../../../assets/images/header-image-information-service.jpg";
 
 export default function InformationServiceTab() {
   return (

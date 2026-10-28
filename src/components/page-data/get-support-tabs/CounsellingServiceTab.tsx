@@ -1,4 +1,4 @@
-import headerImage from "../assets/images/header-image-counselling-service.png";
+import headerImage from "../../../assets/images/header-image-counselling-service.png";
 
 export default function CounsellingServiceTab() {
   return (
