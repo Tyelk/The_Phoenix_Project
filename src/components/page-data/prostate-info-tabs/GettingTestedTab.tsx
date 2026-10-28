@@ -1,11 +1,12 @@
+import headerImage from "../assets/images/header-image-getting-tested.jpg";
+
 export default function GettingTestedTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-getting-tested.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Getting Tested</h1>

@@ -1,10 +1,13 @@
+import headerImage from "../assets/images/header-image-prostate.jpg";
+import prostateImage from "../assets/images/prostate-diagram.jpg";
+
 export default function ProstateTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage: "url(/src/assets/images/header-image-prostate.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>The Prostate</h1>
@@ -35,7 +38,7 @@ export default function ProstateTab() {
 
         <img
           className="content-image"
-          src={"/src/assets/images/prostate-diagram.jpg"}
+          src={prostateImage}
           alt="Diagram of the prostate gland"
         />
       </div>

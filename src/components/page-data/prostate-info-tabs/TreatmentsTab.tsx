@@ -1,11 +1,12 @@
+import headerImage from "../assets/images/header-image-treatments.jpg";
+
 export default function TreatmentsTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-treatments.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Treatments</h1>

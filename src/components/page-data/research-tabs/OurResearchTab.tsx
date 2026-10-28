@@ -1,3 +1,6 @@
+import centreImage from "../assets/images/kathleen-kilgour-centre.png";
+import signImage from "../assets/images/mimr-sign.png";
+
 export default function OurResearchTab() {
   return (
     <>
@@ -58,7 +61,7 @@ export default function OurResearchTab() {
 
         <img
           className="content-image"
-          src={"/src/assets/images/kathleen-kilgour-centre.png"}
+          src={centreImage}
           alt="Kathleen Kilgour Centre logo"
         />
 
@@ -115,7 +118,7 @@ export default function OurResearchTab() {
 
         <img
           className="content-image"
-          src={"/src/assets/images/mimr-sign.png"}
+          src={signImage}
           alt="Photo of the Malaghan Institute of Medical Research sign"
         />
 

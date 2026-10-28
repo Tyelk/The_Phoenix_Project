@@ -1,11 +1,12 @@
+import headerImage from "../assets/images/header-image-counselling-service.png";
+
 export default function CounsellingServiceTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-counselling-service.png)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Counselling Service</h1>

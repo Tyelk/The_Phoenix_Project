@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FREQUENTLY_ASKED_QUESTIONS_DATA } from "../data/FrequentlyAskedQuestionsData";
+import headerImage from "../assets/images/header-image-faq.jpg";
 
 export default function FrequentlyAskedQuestionsTab() {
   const [openId, setOpenId] = useState<number | null>(null);
@@ -15,7 +16,7 @@ export default function FrequentlyAskedQuestionsTab() {
         <div
           className="content-main-area-header"
           style={{
-            backgroundImage: "url(/src/assets/images/header-image-faq.jpg)",
+            backgroundImage: `url(${headerImage})`,
           }}
         >
           <h1>Frequently Asked Questions</h1>

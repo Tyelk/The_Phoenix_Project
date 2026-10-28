@@ -1,5 +1,6 @@
 import { SUPPORT_GROUP_DATA } from "../data/SupportGroupData";
 import GroupSearch from "../../GroupSearch";
+import headerImage from "../assets/images/header-image-support-groups.jpg";
 
 export default function SupportGroupsTab() {
   return (
@@ -7,8 +8,7 @@ export default function SupportGroupsTab() {
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-support-groups.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Support Groups</h1>

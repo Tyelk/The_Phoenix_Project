@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import type { JSX } from "react/jsx-runtime";
+import brandLogo from "../assets/graphics/logo.png";
+import searchSymbol from "../assets/graphics/search.svg";
 
 export default function PageHeader(): JSX.Element {
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
@@ -38,7 +40,7 @@ export default function PageHeader(): JSX.Element {
     <header>
       {/* Logo section */}
       <Link id="header-logo-container" to="/">
-        <img src="/src/assets/graphics/logo.png" alt="PCFNZ logo" />
+        <img src={brandLogo} alt="PCFNZ logo" />
       </Link>
 
       {/* Hamburger menu toggle */}
@@ -73,7 +75,7 @@ export default function PageHeader(): JSX.Element {
       <div id="header-button-container">
         <div id="header-search-container">
           <button type="button" onClick={toggleSearch}>
-            <img src="/src/assets/graphics/search.svg" alt="Search icon" />
+            <img src={searchSymbol} alt="Search icon" />
           </button>
 
           {/* Search Dropdown */}

@@ -1,11 +1,14 @@
+import headerImage from "../assets/images/header-image-getting-diagnosed.jpg";
+import gleasonTableImage from "../assets/images/isup-gleason-table.png";
+import stagingTableImage from "../assets/images/staging-table.png";
+
 export default function GettingDiagnosedTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-getting-diagnosed.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Getting Diagnosed</h1>
@@ -152,13 +155,13 @@ export default function GettingDiagnosedTab() {
 
         <img
           className="content-image"
-          src={"/src/assets/images/isup-gleason-table.png"}
+          src={gleasonTableImage}
           alt="Image of a bone scane"
         />
 
         <img
           className="content-image"
-          src={"/src/assets/images/staging-table.png"}
+          src={stagingTableImage}
           alt="Image of a bone scane"
         />
 

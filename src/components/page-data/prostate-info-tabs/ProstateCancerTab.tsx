@@ -1,11 +1,13 @@
+import headerImage from "../assets/images/header-image-prostate-cancer.jpg";
+import prostatitisImage from "../assets/images/prostatitis-image.png";
+
 export default function ProstateCancerTab() {
   return (
     <>
       <div
         className="content-main-area-header"
         style={{
-          backgroundImage:
-            "url(/src/assets/images/header-image-prostate-cancer.jpg)",
+          backgroundImage: `url(${headerImage})`,
         }}
       >
         <h1>Prostate Cancer</h1>
@@ -140,7 +142,7 @@ export default function ProstateCancerTab() {
 
         <img
           className="content-image"
-          src={"/src/assets/images/prostatitis-image.png"}
+          src={prostatitisImage}
           alt="Image of prostatitis infection"
         />
 
