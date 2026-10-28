@@ -53,13 +53,14 @@ const NotFoundPage = () => {
 
 export default function App(): JSX.Element {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <ScrollToPageTop />
 
       <PageHeader />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
+
         <Route path="/donate" element={<DonatePage />} />
         <Route
           path="/prostate-information"
