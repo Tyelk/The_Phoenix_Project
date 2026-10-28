@@ -3,6 +3,7 @@ import GameIcon from "./icons/GameIcon";
 import HelpIcon from "./icons/HelpIcon";
 import ResearchIcon from "./icons/ResearchIcon";
 import { Link } from "react-router-dom";
+import greyManMainImg from "../assets/images/pcfnz-grey-man.jpg";
 
 export default function Home(): JSX.Element {
   return (
@@ -10,7 +11,7 @@ export default function Home(): JSX.Element {
       <div
         id="content-first"
         style={{
-          backgroundImage: "url(/src/assets/images/pcfnz-grey-man.jpg)",
+          backgroundImage: `url(${greyManMainImg})`,
         }}
       >
         <h1>
