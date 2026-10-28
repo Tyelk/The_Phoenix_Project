@@ -1,5 +1,5 @@
 import type { JSX } from "react/jsx-runtime";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import PageHeader from "./components/PageHeader";
 import PageFooter from "./components/PageFooter";
 import Home from "./components/Home";
@@ -53,11 +53,12 @@ const NotFoundPage = () => {
 
 export default function App(): JSX.Element {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <ScrollToPageTop />
 
       <PageHeader />
 
+      {/* Page/Content Routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -81,7 +82,8 @@ export default function App(): JSX.Element {
       </Routes>
 
       <ChatBotPopup />
+
       <PageFooter />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
