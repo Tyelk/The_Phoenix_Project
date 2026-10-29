@@ -14,13 +14,16 @@ export default function PageFooter(): JSX.Element {
     <footer>
       {/* Mailing */}
       <div className="footer-links" id="footer-mail">
-        <button
-          type="button"
+        <a
+          href="https://fundraising.vega.works/widget?WID=236fc402-3f49-4ecd-972f-4b1d049baf11&WType=Registration&OID=AC509CD9-8DF7-4773-8BCF-520636B28A1F"
           className="plain-btn"
-          onClick={() => togglePopup()}
+          onClick={(e) => {
+            e.preventDefault();
+            togglePopup();
+          }}
         >
           Join the mailing list!
-        </button>
+        </a>
       </div>
 
       {/* Contacts */}
@@ -42,7 +45,7 @@ export default function PageFooter(): JSX.Element {
         <ul>
           <li>
             <a
-              href="/"
+              href="https://www.facebook.com/ProstateCancerFoundationofNewZealand"
               onClick={(e) => {
                 e.preventDefault();
                 togglePopup();
@@ -53,7 +56,7 @@ export default function PageFooter(): JSX.Element {
           </li>
           <li>
             <a
-              href="/"
+              href="https://www.instagram.com/prostatecancernz/"
               onClick={(e) => {
                 e.preventDefault();
                 togglePopup();
@@ -64,7 +67,7 @@ export default function PageFooter(): JSX.Element {
           </li>
           <li>
             <a
-              href="/"
+              href="https://www.linkedin.com/login/?session_redirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F18908428%2Fadmin%2Ffeed%2Fposts%2F"
               onClick={(e) => {
                 e.preventDefault();
                 togglePopup();
@@ -81,7 +84,7 @@ export default function PageFooter(): JSX.Element {
         <ul>
           <li>
             <a
-              href="/"
+              href="https://prostate.org.nz/terms-and-conditions"
               onClick={(e) => {
                 e.preventDefault();
                 togglePopup();
@@ -92,7 +95,7 @@ export default function PageFooter(): JSX.Element {
           </li>
           <li>
             <a
-              href="/"
+              href="https://prostate.org.nz/privacy-statement"
               onClick={(e) => {
                 e.preventDefault();
                 togglePopup();
