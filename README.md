@@ -1,6 +1,11 @@
 # The Phoenix Project
 
-Revamped PCFNZ website.
+Revamped Prostate Cancer Foundation of New Zealand (PCFNZ) website.
+
+## GitHub Pages Link
+```
+https://Tyelk.github.io/The_Phoenix_Project
+```
 
 ## Features
 
