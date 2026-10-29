@@ -21,7 +21,15 @@ export default function EducationResourcesTab() {
           <li>Pads Are Not The Only Solution For Urinary Incontinence</li>
         </ul>
 
-        <p>Playlist Link: https://youtu.be/muPt_O8Yd0c?si=wGPhlWX2dPPffXdQ</p>
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/muPt_O8Yd0c"
+            title="Living With Advanced Prostate Cancer and Hormone Therapy"
+            allowFullScreen
+          ></iframe>
+        </div>
 
         <h2>Webinars</h2>
 
@@ -38,7 +46,15 @@ export default function EducationResourcesTab() {
           <li>Prostate Cancer in 2020 - an update</li>
         </ul>
 
-        <p>Playlist Link: https://youtu.be/Y8SazmQPRIU?si=o_HlG5ViNhQkR8L1</p>
+        <div className="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Y8SazmQPRIU"
+            title="Webinar | Live Longer and Stronger with Exercise"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     </>
   );
