@@ -65,7 +65,7 @@ export default function Home(): JSX.Element {
             <ResearchIcon className="card-icon" />
             <p>
               Curious as to how the PCFNZ supports prostate cancer research and
-              what the donations got to? Check out our research contributions!
+              what the donations go to? Check out our research contributions!
             </p>
             <Link to="/research" className="plain-btn">
               Research
